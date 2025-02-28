@@ -104,7 +104,7 @@
   <body class="bg-light">
     <div class="banner-wrap vh-100 vw-100 d-flex align-items-center justify-content-center text-white">
       <div class="overlay"></div>
-      <header class="px-5 p-3 text-white fixed-top scrolling">
+      <header class="px-5 p-3 text-white fixed-top">
         <div>
           <h3 class="float-md-start text-center">Portfolio</h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
@@ -117,7 +117,7 @@
       </header>
       <main class="text-center">
         <h1 class="display-1">I am Eckhard Dednam</h1>
-        <span class="lead" id="typed">Fullstack Developer</span>
+        <span id="typed" class="lead"></span>
       </main>
     </div>
 
@@ -133,11 +133,11 @@
                     <img src="https://media.licdn.com/dms/image/v2/D4E03AQEw6JQ7ddN-Ww/profile-displayphoto-shrink_200_200/B4EZVGvv91H0Ak-/0/1740648677851?e=1746057600&v=beta&t=F2sJfeDHwszF7JgTO3nhQ9kKHHHVA8wRnPVgE_jAf2I" alt="...">
                   </div>
                   <div class="col-md-6 mt-3">
-                    <p><strong>Name</strong> Eckhard Dednam</p>
-                    <p><strong>Phone Numbet</strong>060 963 8340</p>
-                    <p><strong>Email</strong>eckhard646@gmail.com</p>
-                    <p><strong>Work</strong>Fullstack Developer</p>
-                    <p><strong>Skills</strong>
+                    <p><strong>Name:</strong> Eckhard Dednam</p>
+                    <p><strong>Phone Number:</strong> 060 963 8340</p>
+                    <p><strong>Email:</strong> eckhard646@gmail.com</p>
+                    <p><strong>Work:</strong> Fullstack Developer</p>
+                    <p><strong>Skills:</strong>
                       <span class="badge rounded-pill bg-dark">HTML</span>
                       <span class="badge rounded-pill bg-dark">CSS</span>
                       <span class="badge rounded-pill bg-dark">git</span>
@@ -244,6 +244,25 @@
         </div>
       </div>
     </section>
+
+    <script>
+      
+      window.addEventListener("scroll", () => {
+          const header = document.querySelector("header")
+          header.classList.toggle("scrolling", window.scrollY > 0)
+        })
+
+    </script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#typed', {
+        strings: ['Fullstack Developer.', 'Enterpreneur.', 'Working at spoove.'],
+        loop: true,
+        typeSpeed: 75,
+        shuffle: true,
+      });
+    </script>
 
     </body>
 </html>
